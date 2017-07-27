@@ -1,5 +1,4 @@
-FROM andreptb/oracle-java:8-alpine
-RUN apk update && apk add bash
+FROM frekele/java:8
 RUN mkdir /clustevalBackend
 WORKDIR /clustevalBackend
 ADD http://maven.compbio.sdu.dk/repository/snapshots/de/clusteval/clustevalBackendServer/1.6.3-SNAPSHOT/clustevalBackendServer-1.6.3-SNAPSHOT.jar /clustevalBackend/clustevalBackendServer.jar
