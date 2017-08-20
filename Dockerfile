@@ -3,3 +3,6 @@ RUN mkdir /clustevalBackend
 WORKDIR /clustevalBackend
 ADD http://maven.compbio.sdu.dk/repository/internal/de/clusteval/clustevalBackendServer/1.8/clustevalBackendServer-1.8.jar /clustevalBackend/clustevalBackendServer.jar
 ADD http://maven.compbio.sdu.dk/repository/internal/de/clusteval/clustevalBackendClient/1.8/clustevalBackendClient-1.8.jar /clustevalBackend/clustevalBackendClient.jar
+# required by affinity propagation
+RUN apk update
+RUN apk add ncurses ncurses5-libs libstdc++
